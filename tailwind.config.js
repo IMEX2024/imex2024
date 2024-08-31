@@ -16,6 +16,18 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        textloop: {
+          from: { transform: "translate3d(0, 0, 0)" },
+          to: { transform: "translate3d(-100%, 0, 0)" },
+        },
+      },
+      animation: {
+        textloop: "textloop 8s linear infinite",
+      },
+      height: {
+        '3vh': 'calc(var(--vh, 1vh) * 300);'
+      }
     },
   },
   plugins: [],
