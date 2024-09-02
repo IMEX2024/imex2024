@@ -32,7 +32,7 @@ export default function Header() {
                 <Image src={slogan} alt="slogan" width={200} />
                 <div className=" h-[4vmin] font-bold flex gap-3 justify-center items-center" >
                     <div className=" bg-black rounded-full w-4 h-4"></div>
-                    <p className=" text-[20px]">MENU</p>
+                    <p className=" text-black text-[20px]">MENU</p>
                 </div>
             </div>
         </header>
