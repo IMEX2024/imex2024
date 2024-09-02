@@ -57,11 +57,11 @@ export default function SecondContainer() {
                     <motion.div
                         style={{ y: textY, opacity: textOpa }}
                         className=' w-full h-[500px] flex place-content-between items-center px-10 '>
-                        <span className='text-[2.7vmin] flex flex-col'>
+                        <span className='text-[2.7vmin] flex flex-col text-black'>
                             <span>trajetória</span>
                             <span>começou em 1986.</span>
                         </span>
-                        <p className='bg-[#fffbf2] w-[40%] font-semibold leading-[1.15em] text-[3.3vmin]'>
+                        <p className='bg-[#fffbf2] text-black w-[40%] font-semibold leading-[1.15em] text-[3.3vmin]'>
                             Desde então, desenvolvemos mais de 250 milhões de metros quadrados em diversos empreendimentos
                             de grande relevância e sucesso no Brasil e no exterior.
                         </p>
