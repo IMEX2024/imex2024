@@ -2,9 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ReactLenis } from "lenis/dist/lenis-react";
-import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
-
 
 export default function ThirdContainer() {
     const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth || 0 : 0);
