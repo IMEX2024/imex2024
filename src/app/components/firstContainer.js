@@ -30,7 +30,7 @@ export default function FirstContainer() {
             <motion.div
                 ref={ref}
                 style={{ opacity, y }}
-                className=" bg-[#fffbf2] w-full h-screen min-h-[65rem] items-center flex flex-col justify-center relative ">
+                className=" bg-[#fffbf2] w-full h-screen items-center flex flex-col justify-center relative ">
                 <div className=" w-full flex justify-center absolute ">
                     <div className=" z-10 w-[45vmin] rounded-full overflow-hidden relative ">
                         <div className=" z-[6] top-[50%] translate-y-[-50%] absolute w-full h-[15vmin] flex justify-center whitespace-nowrap overflow-hidden duration-300 text-white font-bold text-[13vmin] text-center leading-[150%]">
