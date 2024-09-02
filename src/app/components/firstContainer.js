@@ -2,10 +2,11 @@
 import Image from "next/image";
 import CityPic from "/public/city.jpg";
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ReactLenis } from "lenis/dist/lenis-react";
 
 export default function FirstContainer() {
+    const [mainPicScale, setMainPicScale] = useState(0);
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -15,6 +16,14 @@ export default function FirstContainer() {
     const opacity = useTransform(scrollYProgress, [0.6, 1], [1, 0]);
 
     const y = useTransform(scrollYProgress, [0.6, 1], [0, -300]);
+
+    useEffect(() => {
+        if(mainPicScale === 100) {
+            return 
+        }
+        
+        setMainPicScale(100);
+    },[])
 
     return (
         <ReactLenis root>
@@ -30,8 +39,8 @@ export default function FirstContainer() {
                             <div className=" animate-textloop"> &ensp;URBANISMO + ARQUITETURA&ensp; </div>
                             <div className=" animate-textloop"> &ensp;URBANISMO + ARQUITETURA&ensp; </div>
                         </div>
-                        <div className=" z-[5]  h-[45vmin] relative ">
-                            <Image src={CityPic} alt="city" fill />
+                        <div className={` z-[5] h-[45vmin] relative ${mainPicScale === 100 ? 'scale-100' : 'scale-0'} duration-300 `} >
+                            <Image src={CityPic} alt="city" priority fill sizes="100%, 100%" />
                         </div>
                     </div>
                 </div>

@@ -8,17 +8,19 @@ import NumberMen from './number';
 
 
 export default function SecondContainer() {
-    const { scrollY } = useScroll();
+    const { scrollY, scrollYProgress } = useScroll();
 
     const y = useTransform(scrollY, [1000, 2000], [400, 100]);
-    const textY = useTransform(scrollY, [2500, 3200], [700, 0]);
+    const textY = useTransform(scrollYProgress, [0.2, 0.32], [700, 0]);
     const x = useTransform(scrollY, [1000, 2000], [20, 0]);
     const scale = useTransform(scrollY, [1000, 2000], [1.3, 1]);
-    const textOpa = useTransform(scrollY, [2500, 3200], [0, 1]);
+    const textOpa = useTransform(scrollYProgress, [0.27, 0.32], [0, 1]);
     const exitY = useTransform(scrollY, [3500, 4000], [0, -800]);
     const exitOpa = useTransform(scrollY, [3600, 3800], [1, 0]);
     const picExitY = useTransform(scrollY, [3700, 4100], [0, -800]);
     const picExitOpa = useTransform(scrollY, [3800, 4100], [1, 0]);
+
+    // console.log(scrollYProgress);
 
     return (
         <ReactLenis root>

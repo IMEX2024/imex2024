@@ -28,7 +28,7 @@ module.exports = {
       height: {
         '3vh': 'calc(var(--vh, 1vh) * 300);',
         '2.5vh': 'calc(var(--vh, 1vh) * 250);',
-        '4vh': 'calc(var(--vh, 1vh) * 420);',
+        '4vh': 'calc(var(--vh, 1vh) * 350);',
       }
     },
   },

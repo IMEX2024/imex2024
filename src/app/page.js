@@ -1,6 +1,7 @@
+'use client'
+
 import FirstContainer from "./components/firstContainer";
 import FourthContainer from "./components/fourthContainer";
-import Pic from "./components/pic";
 import SecondContainer from "./components/secondContainer";
 import ThirdContainer from "./components/thirdContainer";
 
@@ -12,7 +13,6 @@ export default function Home() {
       <SecondContainer />
       <ThirdContainer />
       <FourthContainer />
-      <div className="w-full h-screen bg-blue-500"></div>
     </main>
   );
 }
