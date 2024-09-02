@@ -19,7 +19,7 @@ export default function FourthContainer() {
     const beachScale = useTransform(scrollYProgress, [0.03, 0.31], [0.55, 1]);
     const textY = useTransform(scrollYProgress, [0, 0.12], [600, 0]);
     const textRotate = useTransform(scrollYProgress, [0.03, 0.13], [30, 0]);
-    console.log(scrollYProgress);
+    // console.log(scrollYProgress);
 
     const handleResize = () => {
         setFourthWidth(window.innerWidth);

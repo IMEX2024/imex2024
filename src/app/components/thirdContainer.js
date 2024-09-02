@@ -36,7 +36,7 @@ export default function ThirdContainer() {
         };
     }, []);
    
-    console.log(num);
+    // console.log(num);
     return (
         <ReactLenis root>
             <div ref={ref} className=" bg-[#fffbf2] pt-[30%] w-full h-4vh items-center relative flex flex-col ">

@@ -8,7 +8,7 @@ import ThirdContainer from "./components/thirdContainer";
 
 export default function Home() {
   return (
-    <main className=" bg-[#fffbf2] flex min-h-screen flex-col items-center">
+    <main className=" bg-[#fffbf2] flex min-h-screen flex-col items-center overflow-y-auto">
       <FirstContainer />
       <SecondContainer />
       <ThirdContainer />
