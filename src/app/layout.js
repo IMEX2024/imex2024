@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className=" overflow-hidden" lang="en">
+    <html lang="en">
       <body className={openSans.className}>
         <Header />
         {children}
