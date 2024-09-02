@@ -45,11 +45,11 @@ export default function ThirdContainer() {
                     className=' bg-[#212121] w-full h-screen sticky top-0 rounded-tr-[550px] flex gap-[15%] items-center justify-center '>
                     <motion.div
                         style={{ opacity: divOpa }}
-                        className=' overflow-hidden relative flex flex-col items-start pt-[2%] w-[45%] h-[30%] mb-[15%] text-[4rem] font-bold leading-[1.15]'>
+                        className=' overflow-hidden relative flex flex-col items-start pt-[2%] w-[45%] h-[30%] mb-[15%] font-bold leading-[1.15]'>
                         <div className=' drop-shadow-[0_45px_7px_#212121] w-full h-[15%] bg-[#212121] absolute top-[-28%] opacity-100 z-20'></div>
                         <motion.div
                             style={{ y: textY, opacity: textOpa }}
-                            className=' text-white ml-3'>A imersão profunda nos desafios e a soma
+                            className=' text-white ml-3 text-[4rem]'>A imersão profunda nos desafios e a soma
                             de expertises são o ponto de partida para criar
                             conceitos claros, impacto real e resultados consistentes.
                             Colaboramos com quem gera valor de maneira ampla e profunda, formando parcerias de longo
