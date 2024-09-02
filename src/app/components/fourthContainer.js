@@ -41,7 +41,7 @@ export default function FourthContainer() {
                         <motion.div style={{scale:beachScale}} className=' w-[35vw] h-[35vw] rounded-2xl absolute top-0 left-[32.5%] translate-x-[-50%] '>
                             <div className=" bg-cover rounded-2xl" style={{ backgroundImage: `url(${Beach.src})`, width: '100%', height: '100%', }}></div>
                         </motion.div>
-                        <motion.div style={{ y:textY, rotate:textRotate }} className={`w-full aspect-[3/1] font-semibold text-[#fffbf2] ${fourthWidth < 1425 ? 'text-[10vmin]' : 'text-[14vmin]'} absolute top-0 leading-[120%] flex flex-col justify-center items-center`}>
+                        <motion.div style={{ y:textY, rotate:textRotate }} className={`w-full aspect-[3/1] font-semibold text-[#fffbf2] text-[10vmin] absolute top-0 leading-[120%] flex flex-col justify-center items-center`}>
                             <p>CRIAMOS PROJETOS</p>
                             <p>COM VALOR-ES</p>
                         </motion.div>
