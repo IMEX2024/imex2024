@@ -18,7 +18,7 @@ export default function NumberMen({firstNum, secondNum, start, end , xStart, xEn
 
     return (
         <ReactLenis root>
-            <motion.div style={{x, y, opacity, scale}} className=" flex w-full h-full absolute ">
+            <motion.div style={{x, y, opacity, scale}} className=" flex w-full h-full absolute text-black ">
                 <div className="w-[50%] h-full  font-bold text-[50vmin] leading-[80%] text-right ">{firstNum}</div>
                 <div className="w-[50%] h-full  font-bold text-[50vmin] leading-[80%] text-left ">{secondNum}</div>
             </motion.div>

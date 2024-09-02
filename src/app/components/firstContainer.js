@@ -44,7 +44,7 @@ export default function FirstContainer() {
                         </div>
                     </div>
                 </div>
-                <div className=" z-[3] w-full h-[15vmin] flex justify-center whitespace-nowrap overflow-hidden duration-300 absolute font-bold text-[13vmin] text-center leading-[150%]">
+                <div className=" text-black z-[3] w-full h-[15vmin] flex justify-center whitespace-nowrap overflow-hidden duration-300 absolute font-bold text-[13vmin] text-center leading-[150%]">
                     <div className=" animate-textloop">&ensp;URBANISMO + ARQUITETURA&ensp;</div>
                     <div className=" animate-textloop"> &ensp;URBANISMO + ARQUITETURA&ensp; </div>
                     <div className=" animate-textloop"> &ensp;URBANISMO + ARQUITETURA&ensp; </div>
@@ -54,13 +54,13 @@ export default function FirstContainer() {
                 <div
 
                     className=" w-full flex justify-end absolute bottom-20">
-                    <div className="  w-[35%] text-[2.1vmin] p-6 font-semibold">
+                    <div className=" text-black  w-[35%] text-[2.1vmin] p-6 font-semibold">
                         <p>Do urbanismo à arquitetura, trabalhamos</p>
                         <p>com criatividade e pragmatismo, com foco na </p>
                         <p>construção de soluções estratégicas, singulares e viáveis, que geram valor de maneira ampla e profunda.</p>
                     </div>
                 </div>
-                <div className=" absolute bottom-3 w-full font-bold text-[20px] flex items-center place-content-between pt-[50px]">
+                <div className=" text-black absolute bottom-3 w-full font-bold text-[20px] flex items-center place-content-between pt-[50px]">
                     <p> CONTATO@</p>
                     <p>RJ +55 21 25416887</p>
                     <p>SP +55 11 3544 3000</p>
