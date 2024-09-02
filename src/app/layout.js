@@ -16,7 +16,9 @@ export default function Layout({ children }) {
     <html lang="en">
       <body className={openSans.className}>
         <Header />
-        <RootLayout children={children} />
+        <RootLayout>
+          {children}
+        </RootLayout>
       </body>
     </html>
   );
