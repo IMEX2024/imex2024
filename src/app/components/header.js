@@ -3,12 +3,16 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import nikeLogo from "/public/nikelogo.png";
 import slogan from "/public/slogan.png";
-import { useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Header() {
     const [position, setPosition] = useState(0);
     const [padding, setPadding] = useState(6);
-    // const { scrollY } = useScroll();
+    const { scrollY, scrollYProgress } = useScroll();
+
+    const backgroundColor = useTransform(scrollYProgress, [0.88, 0.92], ['rgba(255,251,242,1)', 'rgba(33,33,33,1)']);
+    const circleColor = useTransform(scrollYProgress, [0.88, 0.92], ['rgba(0,0,0,1)', 'rgba(255,255,255,1)']);
+    const textColor = useTransform(scrollYProgress, [0.88, 0.92], ['rgba(0,0,0,1)', 'rgba(255,255,255,1)']);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -20,21 +24,21 @@ export default function Header() {
     const handleScroll = useCallback(() => {
         const moving = window.scrollY;
         setPosition(moving);
-        
+
     }, [position]);
 
-    // console.log(scrollY.current);
+    // console.log(scrollYProgress);
 
     return (
-        <header className=" bg-[#fffbf2] w-full fixed z-50 " >
-            <div className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} duration-[400ms] flex items-center place-content-between w-full h-full bg-[#fffbf2] text-[10vmin] leading-[120%]`}>
-                <Image src={nikeLogo} alt="logo" width={120} />
+        <header className=" w-full sticky top-0 z-[99] " >
+            <motion.div style={{backgroundColor}} className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} bg-[#fffbf2] duration-[400ms] flex items-center place-content-between w-full h-full text-[10vmin] leading-[120%]`}>
+                <Image src={nikeLogo} alt="logo" priority width={120} />
                 <Image src={slogan} alt="slogan" width={200} />
                 <div className=" h-[4vmin] font-bold flex gap-3 justify-center items-center" >
-                    <div className=" bg-black rounded-full w-4 h-4"></div>
-                    <p className=" text-black text-[20px]">MENU</p>
+                    <motion.div style={{backgroundColor:circleColor}} className=" bg-black rounded-full w-4 h-4"></motion.div>
+                    <motion.p style={{color:textColor}} className=" text-black text-[20px]">MENU</motion.p>
                 </div>
-            </div>
+            </motion.div>
         </header>
     );
 }

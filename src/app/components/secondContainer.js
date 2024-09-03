@@ -27,7 +27,7 @@ export default function SecondContainer() {
     const picExitY = useTransform(scrollYProgress, [0.65, 0.8], [0, -800]);
     const picExitOpa = useTransform(scrollYProgress, [0.65, 0.8], [1, 0]);
 
-    console.log(scrollYProgress);
+    // console.log(scrollYProgress);
 
     return (
         <ReactLenis root>
