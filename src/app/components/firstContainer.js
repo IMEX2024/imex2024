@@ -54,13 +54,13 @@ export default function FirstContainer() {
                 <div
 
                     className=" w-full flex justify-end absolute bottom-20">
-                    <div className=" text-black  w-[35%] text-[2.1vmin] p-6 font-semibold">
+                    <div className=" text-black  w-[35vmax] mobile:w-full mobile:text-center text-[1.3vmax] mobile:text-[3vmin] p-6 font-semibold">
                         <p>Do urbanismo à arquitetura, trabalhamos</p>
                         <p>com criatividade e pragmatismo, com foco na </p>
                         <p>construção de soluções estratégicas, singulares e viáveis, que geram valor de maneira ampla e profunda.</p>
                     </div>
                 </div>
-                <div className=" text-black absolute bottom-3 w-full font-bold text-[20px] flex items-center place-content-between pt-[50px]">
+                <div className=" text-black absolute bottom-3 w-full font-bold text-[1.2vmax] mobile:text-[2vmin] flex items-center place-content-between px-[1.5%] pt-[2%]">
                     <p> CONTATO@</p>
                     <p>RJ +55 21 25416887</p>
                     <p>SP +55 11 3544 3000</p>

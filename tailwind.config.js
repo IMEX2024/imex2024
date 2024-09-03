@@ -9,7 +9,10 @@ module.exports = {
     fontSize: {
       text100per: '180%',
     },
-
+    screens: {
+      mobile: {max: '929px'},
+      tablet: {max: '800px'},
+    },
     extend: {
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -10,8 +10,8 @@ import { root } from 'postcss';
 export default function FourthContainer() {
     const [fourthWidth, setFourthWidth] = useState(typeof window !== 'undefined' ? window.innerWidth || 0 : 0);
     const ref = useRef(null);
-    const containerRef =useRef(null);
-    const scrollRef = useRef({ root:containerRef });
+    const containerRef = useRef(null);
+    const scrollRef = useRef();
     const isInView = useInView(scrollRef);
     const { scrollY } = useScroll();
     const { scrollYProgress } = useScroll({
@@ -32,7 +32,7 @@ export default function FourthContainer() {
         console.log("Element is in view: ", isInView)
     }, [isInView])
 
-
+    console.log(isInView);
     useEffect(() => {
         window.addEventListener("resize", handleResize);
         return () => {
@@ -44,14 +44,14 @@ export default function FourthContainer() {
     return (
         <ReactLenis root>
             <div ref={ref} className=" bg-[#212121] w-full h-screen items-center flex flex-col ">
-                <div ref={containerRef} className=' bg-[#212121]  w-full h-screen flex gap-[15%] items-center justify-center '>
-                    <div className=' bg-[#212121]  w-full h-full flex justify-center items-start relative overflow-hidden '>
-                        <motion.div style={{ scale: beachScale }} className=' w-[35vw] h-[35vw] rounded-2xl absolute top-0 left-[32.5%] translate-x-[-50%] '>
+                <div className=' bg-[#212121]  w-full h-screen flex gap-[15%] items-start justify-center '>
+                    <div ref={scrollRef} className=' w-full flex flex-col gap-[5vmin] justify-center items-center relative overflow-hidden '>
+                        <motion.div style={{ scale: beachScale }} className=' w-[35vmax] h-[35vmax] tablet:w-[50vmin] tablet:h-[50vmin] rounded-2xl '>
                             <div className=" bg-cover rounded-2xl" style={{ backgroundImage: `url(${Beach.src})`, width: '100%', height: '100%', }}></div>
                         </motion.div>
-                        <div className={`w-full aspect-[3/1] font-semibold text-[#fffbf2] text-[11vmin] absolute top-0 leading-[120%] flex flex-col justify-center items-center`}>
+                        <div className={`w-full aspect-[3/1] font-semibold text-[#fffbf2] text-[9vmax] mobile:text-[10vmin] tablet:text-[10vmin] bigTablet: absolute top-[50%] translate-y-[-50%] leading-[120%] flex flex-col justify-center items-center`}>
                             <p
-                                ref={scrollRef}
+                                
                                 style={{
                                     transform: isInView ? "" : "translateY(200px)",
                                     rotate: isInView ? "" : "10deg",
@@ -61,7 +61,7 @@ export default function FourthContainer() {
                                 
                             >CRIAMOS PROJETOS</p>
                             <p
-                                ref={scrollRef}
+                                
                                 style={{
                                     transform: isInView ? "" : "translateY(200px)",
                                     opacity: isInView ? 1 : 0,
@@ -69,10 +69,10 @@ export default function FourthContainer() {
                                 }}
                             >COM VALOR-ES</p>
                         </div>
-                        <div className=' absolute bottom-0 mb-[5vmin]'>
-                            <div className=' font-bold relative mt-10 w-[300px] pr-3 leading-[180%] text-black bg-[#FFFBF2] text-[16px] text-center rounded-full'>
+                        <div className=''>
+                            <div className=' font-bold relative w-[15vmax] pr-3 leading-[180%] text-black bg-[#FFFBF2] text-[0.8vmax] text-center rounded-full'>
                                 VEJA NOSSO PORTFOLIO
-                                <div className='rounded-full w-[2.3vmin] h-[2.3vmin] bg-black absolute top-[50%] translate-y-[-50%] right-[1%]'></div>
+                                <div className='rounded-full w-[1.3vmax] h-[1.3vmax] bg-black absolute top-[50%] translate-y-[-50%] right-[3%]'></div>
                             </div>
                         </div>
                     </div>

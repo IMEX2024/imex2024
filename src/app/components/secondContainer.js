@@ -46,7 +46,7 @@ export default function SecondContainer() {
                         </motion.div>
                         <motion.div 
                         style={{ y:picExitY, opacity:picExitOpa }}
-                        className='w-[36.2%] h-[60vmin] '>
+                        className='w-[35vmax] h-[35vmax] '>
                             <motion.div
                                 style={{ y, x, scale }}
                                 className="w-full h-full bg-white rounded-3xl overflow-hidden ">
@@ -56,12 +56,12 @@ export default function SecondContainer() {
                     </div>
                     <motion.div
                         style={{ y: textY, opacity: textOpa }}
-                        className=' w-full h-[500px] flex place-content-between items-center px-10 '>
+                        className=' w-full h-[500px] flex place-content-between items-center px-[5%] '>
                         <span className='text-[2.7vmin] flex flex-col text-black'>
                             <span>trajetória</span>
                             <span>começou em 1986.</span>
                         </span>
-                        <p className='bg-[#fffbf2] text-black w-[40%] font-semibold leading-[1.15em] text-[3.3vmin]'>
+                        <p className='bg-[#fffbf2] text-black w-[40%] moblie:w-[55%] font-semibold leading-[1.15em] text-[3.3vmin]'>
                             Desde então, desenvolvemos mais de 250 milhões de metros quadrados em diversos empreendimentos
                             de grande relevância e sucesso no Brasil e no exterior.
                         </p>
