@@ -1,8 +1,8 @@
 
-import { Open_Sans } from "next/font/google";
+import { Familjen_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const openSans = Open_Sans({ subsets: ["latin"] });
+const openSans = Familjen_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
   title: "IMEX2024",

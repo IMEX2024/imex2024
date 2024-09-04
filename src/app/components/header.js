@@ -30,7 +30,7 @@ export default function Header() {
     // console.log(scrollYProgress);
 
     return (
-        <header className=" w-full fixed z-[99] " >
+        <header className=" w-full fixed z-[98] " >
             <motion.div style={{backgroundColor}} className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} bg-[#fffbf2] duration-[400ms] flex items-center place-content-between w-full h-full text-[10vmin] leading-[120%]`}>
                 <Image src={nikeLogo} alt="logo" priority width={120} />
                 {/* <Image src={slogan} alt="slogan" width={200} /> */}
