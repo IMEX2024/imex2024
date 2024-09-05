@@ -13,7 +13,7 @@ export default function Footer() {
         start: { y: 300 },
         end: { y: 0, transition: { duration: 0.5, delay: 0.2 } },
     };
-    console.log(isInView);
+    // console.log(isInView);
 
     return (
         <footer className=" w-full h-full flex flex-col " >
