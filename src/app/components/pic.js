@@ -1,7 +1,5 @@
 'use client'
 
-import Book from "/public/book.png";
-import Wall from "/public/wall.jpg";
 import SecondImg from "/public/secondImg.png";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ReactLenis } from "lenis/dist/lenis-react";

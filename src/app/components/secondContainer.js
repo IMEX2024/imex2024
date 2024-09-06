@@ -44,10 +44,10 @@ export default function SecondContainer() {
                             className='  w-[50%] h-[50vmin] flex relative  '>
                             <NumberMen firstNum={'Experience'} secondNum={''} start={0.13} end={0.21} xStart={1000} xEnd={100}
                                 opaStartTime={0.23} opaEndTime={0.26} opaRealEndTime={0.27} opaStart={1} opaEnd={0} opaRealEnd={0}
-                                scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={1.2} scaleEnd={2.5} />
+                                scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={1} scaleEnd={2.5} />
                             <NumberMen firstNum={'the Difference'} secondNum={'with'} start={0.13} end={0.21} xStart={1450} xEnd={0}
                                 opaStartTime={0.22} opaEndTime={0.25} opaRealEndTime={0.28} opaStart={0} opaEnd={1} opaRealEnd={0}
-                                scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={0.8} scaleEnd={1.2} />
+                                scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={0.7} scaleEnd={1.1} />
                             <NumberMen firstNum={'Advanced AR'} secondNum={''} start={0.13} end={0.21} xStart={1450} xEnd={0}
                                 opaStartTime={0.26} opaEndTime={0.28} opaRealEndTime={0.29} opaStart={0} opaEnd={1} opaRealEnd={1}
                                 scaleStartTime={0.26} scaleEndTime={0.29} scaleStart={0.7} scaleEnd={1} />
@@ -61,9 +61,9 @@ export default function SecondContainer() {
                                 <Pic />
                                 <div className={`bg-black ${textOn ? 'opacity-40' : 'opacity-0'} duration-500 ease-in-out w-full h-full absolute top-0`}></div>
                                 <div onClick={controlText} className='absolute top-0 w-full h-full text-center flex justify-center items-center '>
-                                    <p className={` text-white w-full font-normal leading-[1.15em] text-[3.1vmin] duration-700 ease-in-out ${textOn === true ? 'opacity-100' : 'opacity-0'} `}>
-                                        Desde então, desenvolvemos mais de 250 milhões de metros quadrados em diversos empreendimentos
-                                        de grande relevância e sucesso no Brasil e no exterior.
+                                    <p className={` text-white w-full font-normal font-AppleFont leading-[1.15em] text-[3.1vmin] duration-700 ease-in-out ${textOn === true ? 'opacity-100' : 'opacity-0'} `}>
+                                    We provide the ultimate user experience, perfected with high-quality 3D rendering and motion-sickness-free stereoscopic technology. 
+                                    Each piece of content immerses you with indistinguishable clarity and responsiveness from reality.
                                     </p>
                                 </div>
                             </motion.div>
@@ -72,10 +72,10 @@ export default function SecondContainer() {
                     <motion.div
                         style={{ y: textY, opacity: textOpa }}
                         className=' w-full h-[500px] flex place-content-between items-center px-[5%] '>
-                        <span className='text-[2.7vmin] flex flex-col text-white'>
+                        {/* <span className='text-[2.7vmin] flex flex-col text-white'>
                             <span>trajetória</span>
                             <span>começou em 1986.</span>
-                        </span>
+                        </span> */}
                     </motion.div>
                 </div>
             </div>

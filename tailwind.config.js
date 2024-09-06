@@ -14,6 +14,9 @@ module.exports = {
       tablet: {max: '800px'},
     },
     extend: {
+      fontFamily: {
+        AppleFont: ['AppleFont'],
+      },
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic":

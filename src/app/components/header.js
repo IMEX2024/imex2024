@@ -30,14 +30,15 @@ export default function Header() {
     // console.log(scrollYProgress);
 
     return (
-        <header className=" w-full fixed z-[98] " >
+        <header className=" w-full fixed z-[98] px-[1.5%] " >
             <motion.div style={{ backgroundColor }} className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} duration-[400ms] flex items-center place-content-between w-full h-full text-[10vmin] leading-[120%]`}>
                 <div className=" relative w-[34vmin] h-[6vmin]">
-                    <Image src={Logo} alt="logo" priority fill />
+                    <Image src={Logo} alt="logo" placeholder="blur"
+                        blurDataURL={'/public/Logo.png'} fill sizes="100%, 100%" />
                 </div>
-                <div className=" h-[4vmin] font-bold flex gap-3 justify-center items-center" >
+                <div className="h-[4vmin] font-normal flex gap-3 justify-center items-center" >
                     <motion.div style={{ backgroundColor: circleColor }} className=" bg-white rounded-full w-4 h-4 mobile:w-2 mobile:h-2 "></motion.div>
-                    <motion.p style={{ color: textColor }} className=" text-white text-[20px] mobile:text-[3vmin]">MENU</motion.p>
+                    <motion.p style={{ color: textColor }} className=" text-white text-[25px] mobile:text-[3vmin] font-AppleFont ">MENU</motion.p>
                 </div>
             </motion.div>
         </header>

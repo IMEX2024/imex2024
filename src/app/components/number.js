@@ -20,8 +20,8 @@ export default function NumberMen({firstNum, secondNum, start, end , xStart, xEn
     return (
         <ReactLenis root>
             <motion.div style={{x, y, opacity, scale}} className={` flex flex-col w-full h-full absolute text-white `}>
-                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[14vmin] mobile:text-[6vmin] leading-[200%] text-left `}>{firstNum}</motion.div>
-                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[14vmin] mobile:text-[6vmin] leading-[80%] text-left `}>{secondNum}</motion.div>
+                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[9vmin] mobile:text-[6vmin] leading-[200%] text-left `}>{firstNum}</motion.div>
+                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[9vmin] mobile:text-[6vmin] leading-[80%] text-left `}>{secondNum}</motion.div>
             </motion.div>
         </ReactLenis>
 

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'AppleFont';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/public/font/AppleSDGothicNeoM.ttf') format('truetype');
+}
+
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -1,8 +1,8 @@
-
-import { Familjen_Grotesk } from "next/font/google";
+import { Familjen_Grotesk, Krona_One } from "next/font/google";
 import "./globals.css";
 
 const openSans = Familjen_Grotesk({ subsets: ["latin"] });
+const kronaOne = Krona_One({subsets: ["latin"], weight: ["400"]});
 
 export const metadata = {
   title: "IMEX2024",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={openSans.className}>
+      <body className={kronaOne.className}>
         {children}
       </body>
     </html>
