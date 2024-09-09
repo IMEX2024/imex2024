@@ -31,25 +31,24 @@ export default function Footer() {
                     PRIVACIDADE & TERMOS
                 </div>
             </div> */}
-            <div className=" bg-[#2400FF] w-full h-0.2vh flex items-center place-content-between px-[5%] 
-            text-[1.2vmax] mobile:text-[1.2vmin] font-bold rounded-t-2xl">
+            <div className=" bg-[#2400FF] w-full h-0.2vh mobile:h-[40%] flex mobile:flex-col items-center moblie:items-center place-content-between px-[5%] 
+            text-[1.2vmax] font-bold rounded-t-3xl mobile:pt-[15%]">
                 <p>CONTATO@DEFPROJETOS.COM</p>
                 <div className=" flex flex-col ">
                     <p>RJ +55 21 25416687</p>
                     <p>SP +55 11 3544 3000</p>
                 </div>
-                <div className="flex flex-col items-end w-[36%]">
-                    <p>DESDE 1986 @ TODOS OS DIRETTOS RESERVADOS</p>
-                    <div className=" w-full flex justify-end gap-[3%] font-semibold text-[0.75vmax] mobile:text-[0.75vmin]">
+                <div className="flex flex-col items-end mobile:items-center w-[36%] mobile:w-full">
+                    <p className="mb-[5%]">DESDE 1986 @ TODOS OS DIRETTOS RESERVADOS</p>
+                    <div className=" w-full flex justify-end mobile:justify-center gap-[3%] font-semibold text-[0.75vmax] mobile:text-[1vmax]">
                         <p>BRANDING: WHERE</p>
                         <p>DESIGN: JARCOSWORK</p>
                         <p>BRANDING: PROGRAMARORIO</p>
                     </div>
                 </div>
             </div>
-            <div ref={defRef} className=" bg-[#2400FF] w-full h-0.8vh flex justify-center items-center px-[5%]
-            text-[55vmin] leading-none">
-                <div className="w-full mobile:h-[30%] h-[50%] relative">
+            <div ref={defRef} className=" bg-[#2400FF] w-full h-0.8vh flex justify-center items-center px-[5%]">
+                <div className=" w-full mobile:h-[30%] h-[50%] relative">
                     <Image src={Logo} fill priority sizes="100vw, 100vw" />
                 </div>
                 {/* <AnimatePresence>

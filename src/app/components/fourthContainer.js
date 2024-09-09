@@ -23,10 +23,10 @@ export default function FourthContainer() {
     });
 
     const beachScale = useTransform(scrollYProgress, [0.03, 0.31], [0.55, 1]);
-    const titleTextOpa = useTransform(scrollYProgress, [0.05, 0.24], [0, 1]);
-    const titleTextX = useTransform(scrollYProgress, [0.05, 0.24], ['-150%', '0%']);
-    const textY = useTransform(scrollYProgress, [0.07, 0.22], ['300%', '0%']);
-    const picX = useTransform(scrollYProgress, [0.1, 0.47], ['100%', '-22%']);
+    const titleTextOpa = useTransform(scrollYProgress, [0.05, 0.16], [0, 1]);
+    const titleTextX = useTransform(scrollYProgress, [0.05, 0.16], ['-150%', '0%']);
+    const textY = useTransform(scrollYProgress, [0.07, 0.16], ['300%', '0%']);
+    const picX = useTransform(scrollYProgress, [0.1, 0.2], ['100%', '-22%']);
     const logoX = useTransform(scrollYProgress, [0.5, 0.6], ['100%', '0%']);
     const fourthLogoX = useTransform(scrollYProgress, [0.5, 0.6], ['-100%', '0%']);
     const logoDivOpa = useTransform(scrollYProgress, [0.4, 0.61], [0, 1]);
@@ -36,13 +36,14 @@ export default function FourthContainer() {
     const footerY = useTransform(scrollYProgress, [0.5, 0.65, 0.8], ['10%', '-40%', '0%']);
 
 
-    console.log(scrollYProgress);
+    // console.log(scrollYProgress);
 
     return (
         <ReactLenis root>
             <div ref={ref} className=" bg-black w-full h-auto items-center flex flex-col ">
                 <div className=' bg-black w-full h-2vh flex items-start justify-center overflow-hidden '>
-                    <div className=' bg-[#2400FF] flex flex-col gap-[2%] mobile:gap-0 py-[8%] items-center justify-center w-full h-1vh sticky top-0 rounded-br-[1000px] '>
+                    <div className=' bg-[#2400FF] flex flex-col gap-[2%] mobile:gap-[10%] py-[8%] mobile:py-0 items-center justify-center w-full h-1vh sticky top-0 
+                    rounded-br-[1000px] mobile:rounded-br-[150px] overflow-hidden '>
                         <div className=' flex flex-col w-[80%] h-[25vmin] text-white'>
                             <motion.p style={{ opacity: titleTextOpa, x: titleTextX }} className=' font-bold text-[3.5vmax] mb-[2%]'>Core Team</motion.p>
                             <motion.p style={{ y: textY }} className=' font-normal text-[1.3vmax] pl-[5%]'>ImmersiX is powered by a diverse team of experts committed to revolutionizing the AR/VR landscape.
@@ -50,16 +51,16 @@ export default function FourthContainer() {
                                 and digital content creation, ensuring that ImmersiX remains at the forefront of innovation.
                             </motion.p>
                         </div>
-                        <motion.div style={{ x: picX }} className=' w-full flex mobile:flex-col mobile:mb-[25%]'>
+                        <motion.div style={{ x: picX }} className=' w-full flex mobile:flex-col mobile:mb-[25%] mobile:ml-[45%]'>
                             <div className=' flex justify-center items-center w-[50%] h-[30vmax] mobile:w-full '>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[23vmin] h-[23vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
                                 </div>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[23vmin] h-[23vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
@@ -67,13 +68,13 @@ export default function FourthContainer() {
                             </div>
                             <div className=' flex justify-center items-center w-[50%] mobile:w-full h-full'>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[23vmin] h-[23vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
                                 </div>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[23vmin] h-[23vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>

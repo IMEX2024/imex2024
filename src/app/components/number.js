@@ -8,11 +8,11 @@ export default function NumberMen({firstNum, secondNum, start, end , xStart, xEn
     opaStartTime, opaEndTime ,opaRealEndTime,opaRealEnd, opaStart, opaEnd, scaleStartTime, scaleEndTime, scaleStart, scaleEnd }) {
     const { scrollY, scrollYProgress } = useScroll();
 
-    const y = useTransform(scrollYProgress, [0.086, 0.13], [400, 300]);
+    const y = useTransform(scrollYProgress, [0.08, 0.12], ['200%', '60%']);
     const x = useTransform(scrollYProgress, [start, end], [xStart, xEnd]);
     const opacity = useTransform(scrollYProgress, [opaStartTime, opaEndTime, opaRealEndTime], [opaStart, opaEnd, opaRealEnd]);
     const scale = useTransform(scrollYProgress, [scaleStartTime, scaleEndTime], [scaleStart, scaleEnd]);
-    const numOpa = useTransform(scrollYProgress, [0.152, 0.166], [0, 1]);
+    const numOpa = useTransform(scrollYProgress, [0.11, 0.14], [0, 1]);
 
 
     // console.log('scroll', scrollYProgress);
