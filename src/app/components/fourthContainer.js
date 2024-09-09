@@ -41,7 +41,7 @@ export default function FourthContainer() {
     return (
         <ReactLenis root>
             <div ref={ref} className=" bg-black w-full h-auto items-center flex flex-col ">
-                <div className=' bg-black w-full h-2vh flex items-start justify-center '>
+                <div className=' bg-black w-full h-2vh flex items-start justify-center overflow-hidden '>
                     <div className=' bg-[#2400FF] flex flex-col gap-[2%] mobile:gap-0 py-[8%] items-center justify-center w-full h-1vh sticky top-0 rounded-br-[1000px] '>
                         <div className=' flex flex-col w-[80%] h-[25vmin] text-white'>
                             <motion.p style={{ opacity: titleTextOpa, x: titleTextX }} className=' font-bold text-[3.5vmax] mb-[2%]'>Core Team</motion.p>
@@ -82,7 +82,7 @@ export default function FourthContainer() {
                         </motion.div>
                     </div>
                 </div>
-                <div className=' bg-black flex flex-col gap-[2%] py-[8%] items-center justify-center w-full h-1vh'>
+                <div className=' bg-black flex flex-col gap-[2%] py-[8%] items-center justify-center w-full h-1vh overflow-hidden'>
                     <div className=' flex flex-col justify-center items-end w-[80%] h-[25vmax] text-white '>
                         <motion.p style={{ x: secondTitleTextX }} className=' font-bold text-[3.5vmax] mb-[2%]'>Partners</motion.p>
                         <motion.p style={{ y: secondTextY, opacity: secondTextOpa }} className=' font-normal text-[1.3vmax] pl-[5%] text-end'>
