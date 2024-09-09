@@ -20,15 +20,17 @@ export default function SecondContainer() {
 
     const y = useTransform(scrollYProgress, [0.07, 0.3], [400, 100]);
     const x = useTransform(scrollYProgress, [0.07, 0.3], [20, 0]);
+    const moblieX =useTransform(scrollYProgress, [0.07, 0.3], [0, 5]);
     const scale = useTransform(scrollYProgress, [0.07, 0.3], [1.3, 1]);
     const textY = useTransform(scrollYProgress, [0.44, 0.7], [700, 0]);
     const textOpa = useTransform(scrollYProgress, [0.44, 0.7], [0, 1]);
     const exitY = useTransform(scrollYProgress, [0.7, 0.85], [0, -800]);
-    const exitOpa = useTransform(scrollYProgress, [0.7, 0.85], [1, 0]);
+    const mobileExitY = useTransform(scrollYProgress, [0.7, 1], [0, -200]);
+    const exitOpa = useTransform(scrollYProgress, [0.7, 0.9], [1, 0]);
     const picExitY = useTransform(scrollYProgress, [0.74, 1], [0, -800]);
     const picExitOpa = useTransform(scrollYProgress, [0.71, 0.8], [1, 0]);
 
-    console.log(scrollYProgress);
+    // console.log(scrollYProgress);
 
     const controlText = () => {
         setTextOn(!textOn);
@@ -39,19 +41,35 @@ export default function SecondContainer() {
             <div ref={ref} className=" bg-black w-full h-2.5vh items-center relative flex flex-col">
                 <div className=" bg-black w-full h-screen items-center flex flex-col gap-[5%] justify-center sticky top-0 overflow-hidden ">
                     <div className='w-full flex mobile:flex-col mobile:gap-[15%] justify-center items-center gap-[5%]'>
+                        {/* normal */}
                         <motion.div
-                            style={{ y: exitY, opacity: exitOpa }}
-                            className='  w-[50%] h-[50vmin] flex relative  '>
+                            style={{ opacity: exitOpa }}
+                            className='  w-[50%] h-[50vmin] flex relative mobile:hidden  '>
                             <NumberMen firstNum={'Experience'} secondNum={''} start={0.13} end={0.21} xStart={1000} xEnd={100}
                                 opaStartTime={0.23} opaEndTime={0.26} opaRealEndTime={0.27} opaStart={1} opaEnd={0} opaRealEnd={0}
                                 scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={1} scaleEnd={2.5} />
-                            <NumberMen firstNum={'the Difference'} secondNum={'with'} start={0.13} end={0.21} xStart={1450} xEnd={0}
+                            <NumberMen firstNum={'the Difference'} secondNum={'with'} start={0.13} end={0.21} xStart={1000} xEnd={0}
                                 opaStartTime={0.22} opaEndTime={0.25} opaRealEndTime={0.28} opaStart={0} opaEnd={1} opaRealEnd={0}
                                 scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={0.7} scaleEnd={1.1} />
-                            <NumberMen firstNum={'Advanced AR'} secondNum={''} start={0.13} end={0.21} xStart={1450} xEnd={0}
+                            <NumberMen firstNum={'Advanced AR'} secondNum={''} start={0.13} end={0.21} xStart={1000} xEnd={0}
                                 opaStartTime={0.26} opaEndTime={0.28} opaRealEndTime={0.29} opaStart={0} opaEnd={1} opaRealEnd={1}
                                 scaleStartTime={0.26} scaleEndTime={0.29} scaleStart={0.7} scaleEnd={1} />
                         </motion.div>
+                        {/* mobile */}
+                        <motion.div
+                            style={{ x:moblieX, y: mobileExitY, opacity: exitOpa }}
+                            className='  w-[50%] mobile:w-full h-[50vmin] hidden mobile:flex relative  '>
+                            <NumberMen firstNum={'Experience'} secondNum={''} start={0.13} end={0.21} xStart={1000} xEnd={0}
+                                opaStartTime={0.23} opaEndTime={0.26} opaRealEndTime={0.27} opaStart={1} opaEnd={0} opaRealEnd={0}
+                                scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={1} scaleEnd={2.5} />
+                            <NumberMen firstNum={'the Difference'} secondNum={'with'} start={0.13} end={0.21} xStart={1000} xEnd={0}
+                                opaStartTime={0.22} opaEndTime={0.25} opaRealEndTime={0.28} opaStart={0} opaEnd={1} opaRealEnd={0}
+                                scaleStartTime={0.22} scaleEndTime={0.27} scaleStart={0.5} scaleEnd={2} />
+                            <NumberMen firstNum={'Advanced AR'} secondNum={''} start={0.13} end={0.21} xStart={1000} xEnd={0}
+                                opaStartTime={0.26} opaEndTime={0.28} opaRealEndTime={0.29} opaStart={0} opaEnd={1} opaRealEnd={1}
+                                scaleStartTime={0.26} scaleEndTime={0.29} scaleStart={1} scaleEnd={2.5} />
+                        </motion.div>
+                        {/* picture */}
                         <motion.div
                             style={{ y: picExitY, opacity: picExitOpa }}
                             className='w-[35vmax] h-[35vmax] border-[1px] border-black'>
@@ -69,6 +87,7 @@ export default function SecondContainer() {
                             </motion.div>
                         </motion.div>
                     </div>
+                    {/* optional text */}
                     <motion.div
                         style={{ y: textY, opacity: textOpa }}
                         className=' w-full h-[500px] flex place-content-between items-center px-[5%] '>

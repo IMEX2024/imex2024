@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import Logo from "/public/Logo.png";
-import slogan from "/public/slogan.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Header() {
@@ -30,8 +29,8 @@ export default function Header() {
     // console.log(scrollYProgress);
 
     return (
-        <header className=" w-full fixed z-[98] px-[1.5%] " >
-            <motion.div style={{ backgroundColor }} className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} duration-[400ms] flex items-center place-content-between w-full h-full text-[10vmin] leading-[120%]`}>
+        <header className=" w-full fixed max-x-[100vh] left-0 right-0 top-0 z-[98] px-[1.5%] " >
+            <motion.div className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} duration-[400ms] flex items-center place-content-between w-full h-full text-[10vmin] leading-[120%]`}>
                 <div className=" relative w-[34vmin] h-[6vmin]">
                     <Image src={Logo} alt="logo" placeholder="blur"
                         blurDataURL={'/public/Logo.png'} fill sizes="100%, 100%" />

@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import EffectOrigin from "/public/effect_origin.png";
-import EffectLogoPic from "/public/effect_logo.png";
 import EffectCirclePic from "/public/effect_circle.png";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
@@ -27,7 +26,7 @@ export default function FirstContainer() {
 
         setMainPicScale(100);
     }, [])
-    console.log(mainPicScale);
+    // console.log(mainPicScale);
     return (
         <ReactLenis root>
             <motion.div

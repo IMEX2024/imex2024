@@ -35,7 +35,9 @@ module.exports = {
         '3vh': 'calc(var(--vh, 1vh) * 300);',
         '0.2vh': 'calc(var(--vh, 1vh) * 20);',
         '0.8vh': 'calc(var(--vh, 1vh) * 80);',
+        '1vh': 'calc(var(--vh, 1vh) * 100);',
         '1.2vh': 'calc(var(--vh, 1vh) * 120);',
+        '2vh': 'calc(var(--vh, 1vh) * 200);',
         '2.5vh': 'calc(var(--vh, 1vh) * 250);',
         '4vh': 'calc(var(--vh, 1vh) * 400);',
         

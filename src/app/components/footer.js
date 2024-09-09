@@ -1,23 +1,22 @@
 'use client'
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import nikeLogo from "/public/nikelogo.png";
-import slogan from "/public/slogan.png";
 import { AnimatePresence, motion, useInView, useScroll, useTransform } from "framer-motion";
+import Logo from "/public/Logo.png";
 
 export default function Footer() {
     const defRef = useRef();
     const isInView = useInView(defRef);
 
-    const svgStyle = {
-        start: { y: 300 },
-        end: { y: 0, transition: { duration: 0.5, delay: 0.2 } },
-    };
+    // const svgStyle = {
+    //     start: { y: 300 },
+    //     end: { y: 0, transition: { duration: 0.5, delay: 0.2 } },
+    // };
     // console.log(isInView);
 
     return (
         <footer className=" w-full h-full flex flex-col " >
-            <div className=" bg-[#fffbf2] w-full h-0.2vh px-[5%] rounded-t-2xl " >
+            {/* <div className=" bg-[#fffbf2] w-full h-0.2vh px-[5%] rounded-t-2xl " >
                 <div className=" w-full h-[65%] flex place-content-between items-center font-bold text-[1.2vmax] mobile:text-[1.2vmin]">
                     <p>DEF PROJETOS</p>
                     <p>URBANISMO + ARQUITETURA</p>
@@ -31,9 +30,9 @@ export default function Footer() {
                 font-bold text-[1vmax] mobile:text-[1vmin] border-b-2 border-[rgba(0,0,0,0.1)]">
                     PRIVACIDADE & TERMOS
                 </div>
-            </div>
-            <div className=" bg-[#fffbf2] w-full h-0.2vh flex items-center place-content-between px-[5%] 
-            text-[1.2vmax] mobile:text-[1.2vmin] font-bold">
+            </div> */}
+            <div className=" bg-[#2400FF] w-full h-0.2vh flex items-center place-content-between px-[5%] 
+            text-[1.2vmax] mobile:text-[1.2vmin] font-bold rounded-t-2xl">
                 <p>CONTATO@DEFPROJETOS.COM</p>
                 <div className=" flex flex-col ">
                     <p>RJ +55 21 25416687</p>
@@ -48,9 +47,12 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div ref={defRef} className=" bg-[#fffbf2] w-full h-0.8vh flex justify-center items-center px-[5%]
+            <div ref={defRef} className=" bg-[#2400FF] w-full h-0.8vh flex justify-center items-center px-[5%]
             text-[55vmin] leading-none">
-                <AnimatePresence>
+                <div className="w-full mobile:h-[30%] h-[50%] relative">
+                    <Image src={Logo} fill priority sizes="100vw, 100vw" />
+                </div>
+                {/* <AnimatePresence>
                     {isInView &&
                         <div className=" w-full flex justify-center gap-[1%]">
                             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512">
@@ -78,6 +80,7 @@ export default function Footer() {
                                         // fill: { duration: 2, delay: 1 }, // fill에만 
                                         duration: 1.5,
                                         ease: "easeInOut",
+                                        delay: 1,
                                         // repeat: 1,
                                         // repeatType: "reverse",
                                         // repeatDelay: 1,
@@ -111,6 +114,7 @@ export default function Footer() {
                                         // fill: { duration: 2, delay: 1 }, // fill에만 
                                         duration: 1.8,
                                         ease: "easeInOut",
+                                        delay: 1,
                                         // repeat: 1,
                                         // repeatType: "reverse",
                                         // repeatDelay: 1,
@@ -144,6 +148,7 @@ export default function Footer() {
                                         // fill: { duration: 2, delay: 1 }, // fill에만 
                                         duration: 2.1,
                                         ease: "easeInOut",
+                                        delay: 1,
                                         // repeat: 1,
                                         // repeatType: "reverse",
                                         // repeatDelay: 1,
@@ -156,13 +161,7 @@ export default function Footer() {
 
 
                     }
-                </AnimatePresence>
-
-
-
-
-
-
+                </AnimatePresence> */}
             </div>
         </footer>
     );

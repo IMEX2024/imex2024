@@ -8,7 +8,7 @@ export default function NumberMen({firstNum, secondNum, start, end , xStart, xEn
     opaStartTime, opaEndTime ,opaRealEndTime,opaRealEnd, opaStart, opaEnd, scaleStartTime, scaleEndTime, scaleStart, scaleEnd }) {
     const { scrollY, scrollYProgress } = useScroll();
 
-    const y = useTransform(scrollYProgress, [0.086, 0.13], [400, 200]);
+    const y = useTransform(scrollYProgress, [0.086, 0.13], [400, 300]);
     const x = useTransform(scrollYProgress, [start, end], [xStart, xEnd]);
     const opacity = useTransform(scrollYProgress, [opaStartTime, opaEndTime, opaRealEndTime], [opaStart, opaEnd, opaRealEnd]);
     const scale = useTransform(scrollYProgress, [scaleStartTime, scaleEndTime], [scaleStart, scaleEnd]);
@@ -20,8 +20,8 @@ export default function NumberMen({firstNum, secondNum, start, end , xStart, xEn
     return (
         <ReactLenis root>
             <motion.div style={{x, y, opacity, scale}} className={` flex flex-col w-full h-full absolute text-white `}>
-                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[9vmin] mobile:text-[6vmin] leading-[200%] text-left `}>{firstNum}</motion.div>
-                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[9vmin] mobile:text-[6vmin] leading-[80%] text-left `}>{secondNum}</motion.div>
+                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[9vmin] mobile:text-[6vmin] leading-[200%] text-center `}>{firstNum}</motion.div>
+                <motion.div style={{opacity:numOpa}} className={`w-full h-full opacity-0  font-bold text-[9vmin] mobile:text-[6vmin] mobile:pl-[22%] leading-[80%] text-left `}>{secondNum}</motion.div>
             </motion.div>
         </ReactLenis>
 

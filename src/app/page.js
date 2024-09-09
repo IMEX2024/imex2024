@@ -5,6 +5,7 @@ import FourthContainer from "./components/fourthContainer";
 import Header from "./components/header";
 import SecondContainer from "./components/secondContainer";
 import ThirdContainer from "./components/thirdContainer";
+import ThirdDotSecondContainer from "./components/thirdDotSecondContainer";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <FirstContainer />
       <SecondContainer />
       <ThirdContainer />
+      <ThirdDotSecondContainer />
       <FourthContainer />
     </main>
   );
