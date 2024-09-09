@@ -49,7 +49,7 @@ export default function ThirdContainer() {
                 <motion.div
                     style={{ x }}
                     className=' bg-[#2400FF] w-full h-screen sticky top-0 mobile:pt-[10%] rounded-tr-[1000px] mobile:rounded-tr-[150px] flex mobile:flex-col gap-[15%] items-center justify-center '>
-                    <motion.div style={{ opacity: divOpa }} className="  flex flex-col w-[45%] mobile:w-full h-[40%] gap-[5%] mb-[15%] ">
+                    <motion.div style={{ opacity: divOpa }} className="  flex flex-col w-[45%] mobile:w-full h-[50%] gap-[5%] mb-[15%] ">
                         <motion.p style={{opacity: textOpa, x: titleX}} className=" text-white text-[2.5vmax] mobile:text-[4vmin] mobile:pl-[5%]">Mapping the Future of Immersive Experiences</motion.p>
                         <div
                             className=' overflow-hidden relative flex flex-col items-start pt-[4%] w-full mobile:w-full h-full font-bold leading-[1.15]'>

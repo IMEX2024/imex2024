@@ -33,7 +33,7 @@ export default function ThirdDotSecondContainer() {
     return (
         <ReactLenis root>
             <div ref={ref} className=" bg-[#2400FF] w-full h-1vh relative flex mobile:flex-col items-center justify-center ">
-                <div ref={scrollRef} className=" w-[30%] mobile:w-full h-[60%] flex flex-col justify-center gap-[5%] text-white overflow-hidden ">
+                <div ref={scrollRef} className=" w-[30%] mobile:w-full h-[60%] flex flex-col justify-center gap-[5%] text-white ">
                     <motion.p style={{ opacity: titleTextOpa }} className=" text-[2.5vmax]">Tokenomics</motion.p>
                     <motion.div style={{opacity: textOpa}} className=" flex flex-col ">
                         <p

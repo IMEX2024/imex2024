@@ -42,24 +42,24 @@ export default function FourthContainer() {
         <ReactLenis root>
             <div ref={ref} className=" bg-black w-full h-auto items-center flex flex-col ">
                 <div className=' bg-black w-full h-2vh flex items-start justify-center '>
-                    <div className=' bg-[#2400FF] flex flex-col gap-[2%] mobile:gap-0 py-[8%] items-center justify-center w-full h-1vh sticky top-0 rounded-br-[1000px] overflow-hidden'>
-                        <div className=' flex flex-col w-[80%] h-[65%] text-white overflow-hidden'>
+                    <div className=' bg-[#2400FF] flex flex-col gap-[2%] mobile:gap-0 py-[8%] items-center justify-center w-full h-1vh sticky top-0 rounded-br-[1000px] '>
+                        <div className=' flex flex-col w-[80%] h-[25vmin] text-white'>
                             <motion.p style={{ opacity: titleTextOpa, x: titleTextX }} className=' font-bold text-[3.5vmax] mb-[2%]'>Core Team</motion.p>
                             <motion.p style={{ y: textY }} className=' font-normal text-[1.3vmax] pl-[5%]'>ImmersiX is powered by a diverse team of experts committed to revolutionizing the AR/VR landscape.
                                 Our leadership brings together decades of experience across blockchain, AR/VR technology,
                                 and digital content creation, ensuring that ImmersiX remains at the forefront of innovation.
                             </motion.p>
                         </div>
-                        <motion.div style={{ x: picX }} className=' w-full h-full flex mobile:flex-col mobile:mb-[25%]'>
-                            <div className=' flex justify-center items-center w-[50%] mobile:w-full h-full'>
+                        <motion.div style={{ x: picX }} className=' w-full flex mobile:flex-col mobile:mb-[25%]'>
+                            <div className=' flex justify-center items-center w-[50%] h-[30vmax] mobile:w-full '>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmax] h-[18vmax] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
                                 </div>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmax] h-[18vmax] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
@@ -67,13 +67,13 @@ export default function FourthContainer() {
                             </div>
                             <div className=' flex justify-center items-center w-[50%] mobile:w-full h-full'>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmax] h-[18vmax] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
                                 </div>
                                 <div className='w-[50%] mobile:w-[50%] h-full flex flex-col gap-[10%] justify-center items-center text-white'>
-                                    <div className=' w-[18vmax] h-[18vmax] bg-white rounded-full relative overflow-hidden'>
+                                    <div className=' w-[18vmin] h-[18vmin] bg-white rounded-full relative overflow-hidden'>
                                         <Image src={Boss} fill priority sizes='100vw, 100vw' />
                                     </div>
                                     <p className=' font-normal text-[1vmax]'>Ethan Miller (CEO & Co-Founder)</p>
@@ -83,7 +83,7 @@ export default function FourthContainer() {
                     </div>
                 </div>
                 <div className=' bg-black flex flex-col gap-[2%] py-[8%] items-center justify-center w-full h-1vh'>
-                    <div className=' flex flex-col justify-center items-end w-[80%] h-[60%] text-white overflow-hidden'>
+                    <div className=' flex flex-col justify-center items-end w-[80%] h-[25vmax] text-white '>
                         <motion.p style={{ x: secondTitleTextX }} className=' font-bold text-[3.5vmax] mb-[2%]'>Partners</motion.p>
                         <motion.p style={{ y: secondTextY, opacity: secondTextOpa }} className=' font-normal text-[1.3vmax] pl-[5%] text-end'>
                             At ImmersiX, we leverage strategic partnerships to enhance our technological capabilities and expand our market reach.
