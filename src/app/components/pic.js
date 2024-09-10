@@ -8,7 +8,7 @@ import { ReactLenis } from "lenis/dist/lenis-react";
 export default function Pic() {
     const { scrollYProgress } = useScroll();
 
-    const y = useTransform(scrollYProgress, [0.14, 0.3], ['0%', '-80%']);
+    const y = useTransform(scrollYProgress, [0.14, 0.3], ['0%', '-115%']);
 
     // console.log(scrollYProgress);
 
