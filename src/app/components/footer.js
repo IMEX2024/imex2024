@@ -51,6 +51,7 @@ export default function Footer() {
                 <div className=" w-full mobile:h-[30%] h-[50%] relative">
                     <Image src={Logo} fill priority sizes="100vw, 100vw" />
                 </div>
+               
                 {/* <AnimatePresence>
                     {isInView &&
                         <div className=" w-full flex justify-center gap-[1%]">

@@ -17,15 +17,15 @@ export default function ThirdContainer() {
 
     });
 
-    const textY = useTransform(scrollYProgress, [0.51, 0.6], ['0%', '-90%']);
+    const textY = useTransform(scrollYProgress, [0.51, 0.6], ['0%', '-75%']);
     const circleX = useTransform(scrollYProgress, [0.65, 0.8], ['0%', `-${width / num}%`]);
     const textOpa = useTransform(scrollYProgress, [0.35, 0.5], [0, 1]);
     const x = useTransform(scrollYProgress, [0.2, 0.35], [-950, 0]);
-    const moblieX = useTransform(scrollYProgress, [0.05, 0.2], [-950, 0]);
+    const moblieX = useTransform(scrollYProgress, [0.02, 0.15], [-950, 0]);
     const titleX = useTransform(scrollYProgress, [0.35, 0.5], [-950, 0]);
     const circleScale = useTransform(scrollYProgress, [0.35, 0.5, 0.65, 0.87], [0.2, 2, 2, 0.5]);
     const circleOpa = useTransform(scrollYProgress, [0.35, 0.5, 0.65, 0.87], [0, 1, 1, 0]);
-    const circleRotate = useTransform(scrollYProgress, [0.35, 0.5, 0.65, 0.87], ['0deg', '360deg', '360deg', '0deg']);
+    const circleRotate = useTransform(scrollYProgress, [0.35, 0.6, 0.65, 0.87], ['0deg', '360deg', '360deg', '0deg']);
     const divOpa = useTransform(scrollYProgress, [0.61, 0.85], [1, 0]);
 
     // console.log(scrollYProgress);
@@ -45,20 +45,18 @@ export default function ThirdContainer() {
     // console.log(num);
     return (
         <ReactLenis root>
-            <div ref={ref} className=" bg-black pt-[30%] mobile:pt-[10%] w-full h-4vh mobile:items-start relative flex ">
+            <div ref={ref} className=" bg-black pt-[30%] mobile:pt-0 w-full h-4vh mobile:items-start relative flex ">
                 {/* text */}
                 <motion.div
                     style={{ x }}
                     className=' bg-[#2400FF] w-full h-screen sticky top-0 mobile:pt-[10%] rounded-tr-[1000px] mobile:rounded-tr-[150px] flex mobile:hidden mobile:flex-col gap-[15%] items-center justify-center '>
-                    <motion.div style={{ opacity: divOpa }} className="  flex flex-col w-[45%] mobile:w-full h-[50%] gap-[5%] mb-[15%] ">
-                        <motion.p style={{opacity: textOpa, x: titleX}} className=" text-white text-[2.5vmax] mobile:text-[4vmin] mobile:pl-[5%]">Mapping the Future of Immersive Experiences</motion.p>
-                        <div
-                            className=' overflow-hidden relative flex flex-col items-start pt-[4%] w-full mobile:w-full h-full font-bold leading-[1.15]'>
-
-                            <div className=' drop-shadow-[0_45px_7px_#2400FF] w-full h-[15%] bg-[#2400FF] absolute top-[-25%] mobile:top-[-30%] opacity-100 z-20'></div>
+                    <motion.div style={{ opacity: divOpa }} className=" flex flex-col w-[45%] mobile:w-full h-[60%] gap-[5%] mb-[10%] ">
+                        <motion.p style={{ opacity: textOpa, x: titleX }} className=" text-white text-[2.5vmax] mobile:text-[4vmin] mobile:pl-[5%] leading-tight">Mapping the Future of Immersive Experiences</motion.p>
+                        <div className=' overflow-hidden relative flex flex-col items-start pt-[4%] w-full mobile:w-full h-full font-bold leading-[1.15]'>
+                            <div className=' drop-shadow-[0_45px_7px_#2400FF] w-full h-[15%] bg-[#2400FF] absolute top-[-20%] mobile:top-[-25%] opacity-100 z-20'></div>
                             <motion.div
                                 style={{ y: textY, opacity: textOpa }}
-                                className=' text-white ml-[5%] font-light text-[1.7vmax] mobile:text-[3vmin] whitespace-pre-wrap'>
+                                className=' text-white ml-[5%] font-light text-[1.2vmax] mobile:text-[2.5vmin] whitespace-pre-wrap'>
 
                                 Q1 2024<br />Complete core technology research and platform architecture design. Begin development of IMEX token smart contracts.<br />
 
@@ -71,7 +69,7 @@ export default function ThirdContainer() {
                                 <br />Q4 2025: Secure users and B2B customers, and expand the ecosystem. Start planning for global expansion and localization.<br />
                                 <br />Beyond 2026: Continuously expand and enhance platform features. Fully e xpand into global markets and enhance B2B services.< br />
                             </motion.div>
-                            <div className=' drop-shadow-[0px_-45px_7px_#2400FF] w-full h-[15%] bg-[#2400FF] absolute bottom-[-25%] mobile:bottom-[-30%] opacity-100 z-20'></div>
+                            <div className=' drop-shadow-[0px_-45px_7px_#2400FF] w-full h-[15%] bg-[#2400FF] absolute bottom-[-20%] mobile:bottom-[-40%] opacity-100 z-20'></div>
                         </div>
                     </motion.div>
                     {/* circle */}
@@ -85,10 +83,10 @@ export default function ThirdContainer() {
                 </motion.div>
 
                 <motion.div
-                    style={{ x:moblieX }}
+                    style={{ x: moblieX }}
                     className=' bg-[#2400FF] w-full h-screen sticky top-0 mobile:pt-[10%] rounded-tr-[1000px] mobile:rounded-tr-[150px] hidden mobile:flex  mobile:flex-col gap-[15%] items-center justify-center '>
                     <motion.div style={{ opacity: divOpa }} className="  flex flex-col w-[45%] mobile:w-full h-[50%] gap-[5%] mb-[15%] ">
-                        <motion.p style={{opacity: textOpa, x: titleX}} className=" text-white text-[2.5vmax] mobile:text-[4vmin] mobile:pl-[5%]">Mapping the Future of Immersive Experiences</motion.p>
+                        <motion.p style={{ opacity: textOpa, x: titleX }} className=" text-white text-[2.5vmax] mobile:text-[4vmin] mobile:pl-[5%]">Mapping the Future of Immersive Experiences</motion.p>
                         <div
                             className=' overflow-hidden relative flex flex-col items-start pt-[4%] w-full mobile:w-full h-full font-bold leading-[1.15]'>
 

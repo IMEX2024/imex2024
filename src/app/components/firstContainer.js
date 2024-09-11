@@ -56,17 +56,15 @@ export default function FirstContainer() {
                     </div>
                 </div>
 
-                <div className=" w-full flex justify-end absolute bottom-20">
-                    <div className=" text-white  w-[35vmax] mobile:w-full mobile:text-center text-[1.3vmax] mobile:text-[3vmin] p-6 font-normal">
-                        {/* <p>Do urbanismo à arquitetura, trabalhamos</p>
-                        <p>com criatividade e pragmatismo, com foco na </p> */}
+                <div className=" w-full flex justify-end absolute bottom-[15%]">
+                    <div className=" text-white  w-[35vmax] mobile:w-full mobile:text-center text-[1vmax] mobile:text-[3vmin] p-6 font-normal">
                         <p className=" font-AppleFont ">ImmersiX delivers immersive digital experiences to both
                             users and businesses through cutting-edge AR/VR technology. Here,
                             the future of the digital world begins. a future where technology connects, enhances,
                             and expands the possibilities of your digital interactions like never before.</p>
                     </div>
                 </div>
-                <div className=" text-white absolute bottom-3 w-full font-AppleFont text-[1.2vmax] mobile:text-[2vmin] flex items-center place-content-between px-[1.5%] pt-[2%]">
+                <div className=" text-white absolute bottom-3 w-full font-AppleFont text-[0.8vmax] mobile:text-[2vmin] flex items-center place-content-between px-[1.5%] pt-[2%]">
                     <p>OFFICIAL@IMMERSIX.XYZ</p>
                     <p className=" underline">+00 00 000000</p>
                     <p className=" underline">@FDASDFD</p>

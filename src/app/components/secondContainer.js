@@ -24,11 +24,11 @@ export default function SecondContainer() {
     const scale = useTransform(scrollYProgress, [0.07, 0.3], [1.3, 1]);
     const textY = useTransform(scrollYProgress, [0.44, 0.7], [700, 0]);
     const textOpa = useTransform(scrollYProgress, [0.44, 0.7], [0, 1]);
-    const exitY = useTransform(scrollYProgress, [0.7, 0.85], [0, -800]);
+    const exitY = useTransform(scrollYProgress, [0.65, 0.75], [0, -800]);
+    const exitOpa = useTransform(scrollYProgress, [0.7, 0.73], [1, 0]);
     const mobileExitY = useTransform(scrollYProgress, [0.7, 1], [0, -200]);
-    const exitOpa = useTransform(scrollYProgress, [0.74, 0.9], [1, 0]);
-    const picExitY = useTransform(scrollYProgress, [0.74, 1], [0, -800]);
-    const picExitOpa = useTransform(scrollYProgress, [0.75, 0.8], [1, 0]);
+    const picExitY = useTransform(scrollYProgress, [0.6, 0.7], [0, -1200]);
+    const picExitOpa = useTransform(scrollYProgress, [0.65, 0.75], [1, 0]);
 
     console.log(scrollYProgress);
 
@@ -38,12 +38,12 @@ export default function SecondContainer() {
 
     return (
         <ReactLenis root>
-            <div ref={ref} className=" bg-black w-full h-2vh items-center relative flex flex-col">
+            <div ref={ref} className=" bg-black w-full h-3vh items-center relative flex flex-col">
                 <div className=" w-full h-screen items-center flex flex-col gap-[5%] justify-center sticky top-0 overflow-hidden ">
                     <div className='w-full flex mobile:flex-col mobile:gap-[15%] justify-center items-center gap-0'>
                         {/* normal */}
                         <motion.div
-                            style={{ opacity: exitOpa }}
+                            style={{ y:exitY, opacity: exitOpa }}
                             className=' w-[50%] h-[50vmin] flex items-center relative mobile:hidden  '>
                             <NumberMen firstNum={'Experience'} secondNum={''} start={0.08} end={0.12} xStart={1000} xEnd={100}
                                 opaStartTime={0.13} opaEndTime={0.16} opaRealEndTime={0.17} opaStart={1} opaEnd={0} opaRealEnd={0}
@@ -53,7 +53,7 @@ export default function SecondContainer() {
                                 scaleStartTime={0.16} scaleEndTime={0.19} scaleStart={0.7} scaleEnd={1.1} />
                             <NumberMen firstNum={'Advanced AR'} secondNum={''} start={0.08} end={0.12} xStart={1000} xEnd={0}
                                 opaStartTime={0.18} opaEndTime={0.22} opaRealEndTime={0.23} opaStart={0} opaEnd={1} opaRealEnd={1}
-                                scaleStartTime={0.19} scaleEndTime={0.22} scaleStart={0.7} scaleEnd={2} />
+                                scaleStartTime={0.19} scaleEndTime={0.22} scaleStart={0.7} scaleEnd={1.2} />
                         </motion.div>
                         {/* mobile */}
                         <motion.div
@@ -65,9 +65,9 @@ export default function SecondContainer() {
                             <NumberMen firstNum={'the Difference'} secondNum={'with'} start={0.08} end={0.12} xStart={1000} xEnd={80}
                                 opaStartTime={0.15} opaEndTime={0.18} opaRealEndTime={0.2} opaStart={0} opaEnd={1} opaRealEnd={0}
                                 scaleStartTime={0.16} scaleEndTime={0.19} scaleStart={0.5} scaleEnd={2} />
-                            <NumberMen firstNum={''} secondNum={'Advanced AR'} start={0.08} end={0.12} xStart={1000} xEnd={80}
+                            <NumberMen firstNum={''} secondNum={'Advanced AR'} start={0.08} end={0.12} xStart={1000} xEnd={85}
                                 opaStartTime={0.18} opaEndTime={0.22} opaRealEndTime={0.23} opaStart={0} opaEnd={1} opaRealEnd={1}
-                                scaleStartTime={0.19} scaleEndTime={0.22} scaleStart={1} scaleEnd={2.5} />
+                                scaleStartTime={0.19} scaleEndTime={0.22} scaleStart={1} scaleEnd={1.3} />
                         </motion.div>
                         {/* picture */}
                         <motion.div
@@ -79,7 +79,7 @@ export default function SecondContainer() {
                                 <Pic />
                                 <div className={`bg-black ${textOn ? 'opacity-40' : 'opacity-0'} duration-500 ease-in-out w-full h-full absolute top-0`}></div>
                                 <div onClick={controlText} className='absolute top-0 w-full h-full text-center flex justify-center items-center '>
-                                    <p className={` text-white w-full font-normal font-AppleFont leading-[1.15em] text-[3.1vmin] duration-700 ease-in-out ${textOn === true ? 'opacity-100' : 'opacity-0'} `}>
+                                    <p className={` text-white w-full font-normal font-AppleFont leading-[1.15em] text-[2vmin] duration-700 ease-in-out ${textOn === true ? 'opacity-100' : 'opacity-0'} `}>
                                     We provide the ultimate user experience, perfected with high-quality 3D rendering and motion-sickness-free stereoscopic technology. 
                                     Each piece of content immerses you with indistinguishable clarity and responsiveness from reality.
                                     </p>

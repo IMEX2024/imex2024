@@ -26,6 +26,7 @@ export default function FourthContainer() {
     const titleTextOpa = useTransform(scrollYProgress, [0.05, 0.16], [0, 1]);
     const titleTextX = useTransform(scrollYProgress, [0.05, 0.16], ['-150%', '0%']);
     const textY = useTransform(scrollYProgress, [0.07, 0.16], ['300%', '0%']);
+    const textOpa = useTransform(scrollYProgress, [0.07, 0.16], [0, 1]);
     const picX = useTransform(scrollYProgress, [0.1, 0.2], ['100%', '-22%']);
     const logoX = useTransform(scrollYProgress, [0.5, 0.6], ['100%', '0%']);
     const fourthLogoX = useTransform(scrollYProgress, [0.5, 0.6], ['-100%', '0%']);
@@ -36,7 +37,7 @@ export default function FourthContainer() {
     const footerY = useTransform(scrollYProgress, [0.5, 0.65, 0.8], ['10%', '-40%', '0%']);
 
 
-    // console.log(scrollYProgress);
+    console.log(scrollYProgress);
 
     return (
         <ReactLenis root>
@@ -46,7 +47,7 @@ export default function FourthContainer() {
                     rounded-br-[1000px] mobile:rounded-br-[150px] overflow-hidden '>
                         <div className=' flex flex-col w-[80%] h-[25vmin] text-white'>
                             <motion.p style={{ opacity: titleTextOpa, x: titleTextX }} className=' font-bold text-[3.5vmax] mb-[2%]'>Core Team</motion.p>
-                            <motion.p style={{ y: textY }} className=' font-normal text-[1.3vmax] pl-[5%]'>ImmersiX is powered by a diverse team of experts committed to revolutionizing the AR/VR landscape.
+                            <motion.p style={{ y: textY, opacity: textOpa }} className=' font-normal text-[1.3vmax] pl-[5%]'>ImmersiX is powered by a diverse team of experts committed to revolutionizing the AR/VR landscape.
                                 Our leadership brings together decades of experience across blockchain, AR/VR technology,
                                 and digital content creation, ensuring that ImmersiX remains at the forefront of innovation.
                             </motion.p>

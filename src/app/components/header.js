@@ -31,7 +31,7 @@ export default function Header() {
     return (
         <header className=" w-full fixed max-x-[100vh] left-0 right-0 top-0 z-[98] px-[1.5%] " >
             <motion.div className={` px-4 ${position > 0 ? 'pt-2' : 'pt-10'} duration-[400ms] flex items-center place-content-between w-full h-full text-[10vmin] leading-[120%]`}>
-                <div className=" relative w-[34vmin] h-[6vmin]">
+                <div className=" relative w-[20vmin] h-[4vmin]">
                     <Image src={Logo} alt="logo" placeholder="blur"
                         blurDataURL={'/public/Logo.png'} fill sizes="100%, 100%" />
                 </div>

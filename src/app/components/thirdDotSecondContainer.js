@@ -42,7 +42,7 @@ export default function ThirdDotSecondContainer() {
                                 opacity: isInView ? 1 : 0,
                                 transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
                             }}
-                            className=" text-white text-[1vmax] px-[15%]">The IMEX token serves as the central economic unit within the ImmersiX platform,
+                            className=" text-white text-[0.8vmax] mobile:text-[1vmax] px-[15%]">The IMEX token serves as the central economic unit within the ImmersiX platform,
                             facilitating transactions for AR and 3D content across both consumer and business-to-business
                         </p>
                         <p
@@ -51,7 +51,7 @@ export default function ThirdDotSecondContainer() {
                                 opacity: isInView ? 1 : 0,
                                 transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s"
                             }}
-                            className=" text-white text-[1vmax] px-[15%]">(B2B) environments.
+                            className=" text-white text-[0.8vmax] mobile:text-[1vmax] px-[15%]">(B2B) environments.
                             This utility token streamlines transactions, enhances platform engagement through rewards,
                             and supports the economic activities within the ecosystem.
                         </p>
