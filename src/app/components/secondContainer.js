@@ -29,6 +29,9 @@ export default function SecondContainer() {
     const mobileExitY = useTransform(scrollYProgress, [0.7, 1], [0, -200]);
     const picExitY = useTransform(scrollYProgress, [0.6, 0.7], [0, -1200]);
     const picExitOpa = useTransform(scrollYProgress, [0.65, 0.75], [1, 0]);
+    const exitMobileOpa = useTransform(scrollYProgress, [0.7, 0.9], [1, 0]);
+    const picMobileExitOpa = useTransform(scrollYProgress, [0.65, 0.9], [1, 0]);
+
 
     console.log(scrollYProgress);
 
@@ -57,7 +60,7 @@ export default function SecondContainer() {
                         </motion.div>
                         {/* mobile */}
                         <motion.div
-                            style={{ x:moblieX, y: mobileExitY, opacity: exitOpa }}
+                            style={{ x:moblieX, y: mobileExitY, opacity: exitMobileOpa }}
                             className=' w-[50%] mobile:w-full h-[50vmin] hidden mobile:flex relative  '>
                             <NumberMen firstNum={'Experience'} secondNum={''} start={0.08} end={0.12} xStart={1000} xEnd={100}
                                 opaStartTime={0.13} opaEndTime={0.16} opaRealEndTime={0.17} opaStart={1} opaEnd={0} opaRealEnd={0}
@@ -72,7 +75,24 @@ export default function SecondContainer() {
                         {/* picture */}
                         <motion.div
                             style={{ y: picExitY, opacity: picExitOpa }}
-                            className='w-[35vmax] h-[35vmax] border-[1px] border-black'>
+                            className='w-[35vmax] h-[35vmax] border-[1px] border-black mobile:hidden'>
+                            <motion.div
+                                style={{ y, x, scale }}
+                                className="w-full h-full bg-black rounded-3xl overflow-hidden relative ">
+                                <Pic />
+                                <div className={`bg-black ${textOn ? 'opacity-40' : 'opacity-0'} duration-500 ease-in-out w-full h-full absolute top-0`}></div>
+                                <div onClick={controlText} className='absolute top-0 w-full h-full text-center flex justify-center items-center '>
+                                    <p className={` text-white w-full font-normal font-AppleFont leading-[1.15em] text-[2vmin] duration-700 ease-in-out ${textOn === true ? 'opacity-100' : 'opacity-0'} `}>
+                                    We provide the ultimate user experience, perfected with high-quality 3D rendering and motion-sickness-free stereoscopic technology. 
+                                    Each piece of content immerses you with indistinguishable clarity and responsiveness from reality.
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                        {/* picture mobile */}
+                        <motion.div
+                            style={{ opacity: picMobileExitOpa }}
+                            className='w-[35vmax] h-[35vmax] border-[1px] border-black hidden mobile:block'>
                             <motion.div
                                 style={{ y, x, scale }}
                                 className="w-full h-full bg-black rounded-3xl overflow-hidden relative ">
@@ -87,15 +107,6 @@ export default function SecondContainer() {
                             </motion.div>
                         </motion.div>
                     </div>
-                    {/* optional text */}
-                    {/* <motion.div
-                        style={{ y: textY, opacity: textOpa }}
-                        className=' w-full h-[500px] flex place-content-between items-center px-[5%] '>
-                        <span className='text-[2.7vmin] flex flex-col text-white'>
-                            <span>trajetória</span>
-                            <span>começou em 1986.</span>
-                        </span>
-                    </motion.div> */}
                 </div>
             </div>
         </ReactLenis>
